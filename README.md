@@ -25,7 +25,7 @@
 1. 📥 Склонировать проект или загрузить архив (предположим `~/mine_serv`):
    ```bash
    git clone https://github.com/ibras0696/mine_serv.git ~/mine_serv
-   cd ~/mine_serv/files-3
+   cd ~/mine_serv/
    ```
 2. ⚙️ Подготовить систему:
    ```bash
@@ -56,7 +56,7 @@
 2. **Клонирование проекта.**
    ```bash
    git clone https://github.com/ibras0696/mine_serv.git ~/mine_serv
-   cd ~/mine_serv/files-3
+   cd ~/mine_serv/
    ```
 3. **Создание `.env`.** Выполни `make configure`, затем измени минимум:
    - `SERVER_NAME` — имя сервера в списке клиентов.
@@ -74,7 +74,7 @@
 
 ## Структура проекта
 ```
-files-3/
+mine_serv/
 ├─ Dockerfile
 ├─ docker-compose.yml
 ├─ Makefile
