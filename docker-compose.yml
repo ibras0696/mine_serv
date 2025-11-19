@@ -1,0 +1,27 @@
+﻿version: "3.9"
+
+services:
+  mc:
+    container_name: mc
+    image: mc-forge:1.20.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "${PUBLISHED_PORT:-25565}:25565"
+    volumes:
+      - ./data:/data
+    environment:
+      EULA: "TRUE"
+      TYPE: "FORGE"
+    restart: unless-stopped
+    stop_grace_period: 2m
+    tty: true
+    stdin_open: true
+    healthcheck:
+      test: ["CMD", "mc-health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
